@@ -22,10 +22,12 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
     <link rel="stylesheet" href="estilos.css" />
     <title>Tienda</title>
   </head>
-  <body onload="obtenerProductos()">
+  <body >
     <div class="header">
       <nav class="navbar justify-content-end">
         <form class="form-inline">
@@ -35,59 +37,77 @@
                 class="form-control mr-sm-2"
                 id="categoria"
                 name="categoria"
-                value=""
-                type="search"
                 placeholder="Categoria"
                 aria-label="Buscar"
               />
             </div>
             <div class="col-sm">
-              <button class="btn btn-success" type="submit" onclick="obtenerProductoPorCategoria()">Buscar</button>
+              <button
+                class="btn btn-success"
+                type="submit"
+                onclick="obtenerProductoPorCategoria()"
+              >
+                Buscar
+              </button>
             </div>
           </div>
         </form>
-        <form class="form-inline" >
-            <div class="row">
-              <div class="col-sm">
-                <input
-                  class="form-control mr-sm-2"
-                  id="producto"
-                  name="producto"
-                  value=""
-                  type="search"
-                  placeholder="Producto"
-                  aria-label="Buscar"
-                />
-              </div>
-              <div class="col-sm">
-                <button class="btn btn-danger" type="submit" onclick="obtenerProductoPorNombre()">Producto</button>
-              </div>
+       <!--  <form class="form-inline">
+          <div class="row">
+            <div class="col-sm">
+              <input
+                class="form-control mr-sm-2"
+                id="producto"
+                name="producto"
+                value=""
+                type="search"
+                placeholder="Producto"
+                aria-label="Buscar"
+              />
             </div>
-          </form>
+            <div class="col-sm">
+              <button
+                class="btn btn-danger"
+                type="submit"
+                onclick="obtenerProductoPorNombre()"
+              >
+                Producto
+              </button>
+            </div>
+          </div>
+        </form> -->
       </nav>
     </div>
-    <div class="page-wrapper">
-      <div class="sidebar-wrapper">
+    <!--   <div class="page-wrapper"> -->
+    <!-- <div class="sidebar-wrapper">
         <div class="sidebar-content">
           <div class="sidebar-menu"></div>
         </div>
-      </div>
-
+      </div> -->
+    <div class="container">
       <main class="page-content">
-        <h2>Tienda de bebidas</h2>
-        <hr />
-        <div class="card">
+        <div class="container">
+        
           <div class="row">
-            <div class="col-md-4">
-              <div class="card">
-                <div id="texto_nav1" class="card-body text-center"></div>
-                <div id="texto_nav2" class="card-body text-center"></div>
-                <p id="texto_nav3" class="card-body text-center"></p>
-              </div>
+              <!-- <table id="respuesta">
+                <thead>
+                  <th>Producto</th>
+                  <th>Imagen</th>
+                  <th>Precio</th>
+                  <th>Descuento</th>
+                  <th>Categoria</th>
+                </thead>
+                <tbody id="respuesta_body"></tbody>
+              </table> -->
+              <div class="row" id="div"></div>
+                <div id="respuesta_categoria" class="card-body text-center"></div>
+            <!--    <p id="texto_nav3" class="card-body text-center"></p> -->
             </div>
           </div>
-        </div>
+
+        
       </main>
+      <!-- </div> -->
     </div>
   </body>
 </html>
