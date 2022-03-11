@@ -11,6 +11,11 @@ img{
   height: 200px;
 }
 
+.imagen_tabla{
+  width: 100px;
+  height: 100px;
+}
+
 .tarjeta{
 
   border: 1px solid rgb(247, 244, 244); 
@@ -24,11 +29,24 @@ img{
 .tarjeta>img{
   align-items: center;
  }
+ 
 body{
 
   background-color: #f1f0f0;
 }
+.navbar{
+  justify-content: flex-end;
+  height: 70px;
+}
 
+.titulo{
+  float: center;
+}
+
+.cargando{
+  text-align: center;
+   width: 100%;"
+}
 
 .sidebar-wrapper {
   width: 260px;
@@ -42,6 +60,11 @@ body{
 
 .header{
   background: #ffffff;
+}
+
+tr{
+  width: 100px;
+  height: 100px;
 }
 
 
