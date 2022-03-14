@@ -7,16 +7,7 @@ function obtenerProducto() {
 
 
         for (let i = 0; i < data.length; i++) {
-
-            var imagen = data[i].url_image;
-
-             if (typeof imagen != 'string') {
-                    imagen = "Sin imagen";
-                } else if (!imagen) {
-                    imagen = "Sin imagen";
-                } else {
-                    imagen = '<img src=' + imagen + '>';
-                }
+            
 
             let div = '<div class="card  tarjeta">' +
                 '<img src=' + data[i].url_image + '>' +
@@ -134,9 +125,6 @@ function obtenerProductoPorNombre() {
 }
 
 function obtenerListaProductos() {
-
-
-
     $("#tabla").hide();
     $("#content").show();
     $.ajax({
@@ -152,9 +140,7 @@ function obtenerListaProductos() {
             $("#respuesta_producto").show();
 
         } else {
-
             for (let i = 0; i < data.length; i++) {
-
                 var precio = parseInt(data[i].price);
                 var descuento = parseInt(data[i].discount);
                 var imagen = data[i].url_image;
